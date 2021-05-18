@@ -1,0 +1,27 @@
+@import "../globals/variables";
+
+body.single-testimonials{
+    .quote-background{
+        &:before,
+        &:after{
+            content: '"';
+            font-size: 10em;
+            color: #c9d7ec;
+            display: inline-block;
+            line-height: 0.6em;
+            padding: 0;
+            margin: 0;
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &:after{
+            top: auto;
+            left: auto;
+            bottom: 0;
+            right: 0;
+            line-height: 0.01em;
+        }
+    }
+}

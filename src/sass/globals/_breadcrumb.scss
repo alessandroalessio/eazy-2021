@@ -1,0 +1,76 @@
+@import "_variables";
+
+.hero-wrapper{
+    &.with-image{
+        background-size: cover;
+        background-position: top center;
+        padding-top: 25em;
+        position: relative;
+    }
+    .breadcrumb-wrapper {
+        background-color: $breadcrumb-background-color;
+        padding-top: 2em;
+        padding-bottom: 2em;
+
+        &.has-hero{
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            padding-top: 1em;
+            padding-bottom: 1em;
+        }
+        h1{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .breadcrumb{
+            background: transparent;
+            display: inline-block;
+            margin: 0 auto;
+            padding-top: 0;
+            padding-bottom: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: $white;
+            li{
+                display: inline-block;
+                text-transform: uppercase;
+                font-size: 0.9em;
+                color: $white;
+                a, a:link, a:visited{ 
+                    color: $white;
+                }
+                &.breadcrumb-item{
+                    &:before{
+                        content: '> ';
+                        color: $white;
+                    }
+                    &:first-child:before{
+                        content: '';
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) { 
+    .hero-wrapper{
+        &.with-image{
+            padding-top: 15em;
+        }
+        h1{
+            font-size: 1.5em;
+            margin: 0;
+        }
+        .breadcrumb-wrapper{
+            &.has-hero{
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+            }
+        }
+    }
+}

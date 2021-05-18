@@ -1,0 +1,47 @@
+@import "../globals/variables";
+
+body.post-type-archive-dicono-di-noi{
+    .item-dicono-di-noi{
+        margin-bottom: 1em;
+        .content{
+            background: $color-five;
+            color: $white;
+            text-align: center;
+            padding-top: 1em;
+            padding-bottom: 1em;
+            a{
+                margin: 0 1em;
+                padding: 1em;
+                border: 1px solid $white;
+                display: block;
+                text-decoration: none;
+            }
+            .far{
+                color: $white;
+                margin-bottom: 0.5em;
+            }
+            .verbar{
+                display: block;
+            }
+            h2{
+                font-size: 1.1em;
+                font-weight: 800;
+                min-height: 100px;
+            }
+            .source{
+                font-style: italic;
+                font-size: 0.8em;
+                &:after{
+                    content: ' / ';
+                }
+            }
+            .date{
+                font-size: 0.8em;
+            }
+            .pdf{
+                text-transform: uppercase;
+                font-size: 0.8em;
+            }
+        }
+    }
+}

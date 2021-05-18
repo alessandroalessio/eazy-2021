@@ -1,0 +1,87 @@
+@import "../globals/variables";
+
+body.page-template-page-estetica{
+    #case-studies{
+        background: $color-five;
+        padding-top: 4em;
+        padding-bottom: 4em;
+        h5{
+            color: $white;
+            text-transform: uppercase;
+            font-size: 1em;
+        }
+        h4{
+            font-size: 3em;
+            margin-bottom: 1em;
+        }
+        .case-studies-text{
+            picture,img{
+                display: block;
+                overflow: hidden;
+                border-radius: 2em;
+                width: 100%;
+                max-width: 930px;
+                height: auto;
+            }
+        }
+    }
+    #extra-section{
+        padding-top: 4em;
+        padding-bottom: 4em;
+
+        h3{ 
+            text-transform: uppercase;
+            color: $color-two;
+            font-size: 1.2em;
+        }
+        h2{
+            color: $color-one;
+            font-size: 3em;
+            margin-bottom: 1em;
+        }
+    }
+    #testimonials{
+        background: $color-five;
+        padding-top: 4em;
+        padding-bottom: 4em;
+
+        h5{
+            color: $white;
+            text-transform: uppercase;
+            font-size: 1em;
+        }
+        h4{
+            font-size: 3em;
+            margin-bottom: 1em;
+        }
+        .image-wrapper{
+            max-width: 280px;
+            width: 100%;
+            border-radius: 3em;
+            overflow: hidden;
+            margin: 0 auto 1em auto;
+            
+            picture,img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        .testimonial-separator{
+            display: block;
+            margin-bottom: 0.5em;
+            &:after{
+                content: ' ';
+                display: block;
+                margin-left: 50%;
+                width: 50%;
+                height: 50px;
+                border-left: 1px solid $color-one;
+            }
+        }
+        .testimonial-city-role{
+            text-transform: uppercase;
+            font-size: 0.8em;
+            letter-spacing: 2px;
+        }
+    }
+}

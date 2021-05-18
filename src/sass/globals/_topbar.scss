@@ -1,0 +1,24 @@
+@import "_variables";
+
+.topbar{
+    background-color: $topbar-background-color;
+    color: $topbar-text-color;
+    font-size: 0.75em;
+    padding: 1em 0;
+
+    a, a:link, a:hover, a:active, a:visited{
+        color: $topbar-text-color;
+    }
+    .left{
+        a{
+            margin-right: 0.5em;
+        }
+    }
+    .right{
+        text-align: right;
+    }
+}
+
+@media only screen and (max-width: 767px) { 
+	.topbar .label{ display: none}
+}

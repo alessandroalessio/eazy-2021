@@ -1,7 +1,163 @@
 @import "../globals/variables";
 
-body.page-home{
-    #hero{
-        background: $color-one;
+body.page-template-page-home{
+    .owl-carousel{
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        .item{
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: block;
+            width: 100%;
+            min-height: 440px;
+            background-position: center center;
+        }
+        .owl-nav .owl-next, .owl-nav .owl-prev {
+            position: absolute;
+            top: 48%;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            background: $color-one;
+            color: $white;
+            width: 40px;
+            height: 40px;
+            border-radius: 3em;
+            span{
+                font-size: 2em;
+                line-height: 0.6em;
+                display: block;
+                width: 100%;
+            }
+        }
+        .owl-nav .owl-next {
+            right: 0;
+            display: flex;
+            margin-right: 2%;
+            font-size: 25px !important;
+        }
+        .owl-nav .owl-prev{
+            left: 0;
+            display: flex;
+            margin-left: 2%;
+            font-size: 25px !important;
+        }
+    }
+    #section-1{
+        padding-top: 6em;
+        padding-bottom: 6em;
+        h3{
+            color: $color-six;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9em;
+        }
+        .text-wrapper{
+            font-size: 1.2em;
+            line-height: 1.6em;
+        }
+    }        
+    .home-services{
+        background-color: $color-two;
+        padding-top: 6em;
+        padding-bottom: 6em;
+        h3{
+            color: $white;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9em;
+        }
+        .item-services{
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 2em;
+            margin-bottom: 1.5em;
+            overflow: hidden;
+            border-top: 10px solid $color-three;
+            background: $white;
+            .img-wrapper{
+                background: url('../../../build/img/no-image.jpg') no-repeat center center;
+                background-size: cover;
+                min-height: 200px;
+                display: block;
+            }
+            .content{
+                padding: 3em;
+                h2{
+                    font-size: 1.2em;
+                    text-transform: uppercase;
+                }
+                .excerpt{
+                    height: 100px;
+                }
+                .btn-wrapper{
+                    margin-top: 1.5em;
+                }
+            }
+        }
+    }
+    .home-teams{
+        padding-top: 6em;
+        padding-bottom: 6em;
+        h3{
+            color: $color-six;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9em;
+        }
+        .link-wrapper{
+            margin-top: 3em;
+            a{
+                &:before{
+                    content: '----';
+                    letter-spacing: -2px;
+                    margin-right: 1em;
+                }
+                &:hover,
+                &:active{
+                    text-decoration: none;
+                }
+            }
+            .button{
+                margin: 0 2em;
+                a, a:link, a:visited{
+                    &:before{
+                        content: '';
+                        margin-right: 0em;
+                    }
+                    background: $btn-primary-background-color;
+                    color: $btn-primary-text-color;
+                    font-size: 1.1em;
+                    padding: 0.5em 2em;
+                    display: inline-block;
+                    border-radius: 2em;
+                }
+                a:hover,
+                a:active,
+                a:focus{
+                    background: $btn-primary-background-hover-color;
+                    color: $btn-primary-text-color;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) { 
+	body.page-template-page-home{
+        .owl-carousel{
+            .item{
+                min-height: 200px;
+            }
+        }
+        #section-1{
+            .text-wrapper{
+                padding-top: 1em;
+                padding-bottom: 1em;
+            }
+        }        
+        .link-wrapper{
+            a{
+                display: block;
+                margin: 1em 0;
+            }
+        }
     }
 }

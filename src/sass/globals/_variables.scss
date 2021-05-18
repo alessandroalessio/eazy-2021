@@ -1,8 +1,30 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap');
+$primary-font: 'Sen', sans-serif;
+$secondary-font: $primary-font;
+
 // General Color
-$color-one: #444;
-$color-two: #222;
+$color-one: #194576;
+$color-two: #C8DAE8;
+$color-three: #202c42;
+$color-four: #194576;
+$color-five: #C8DAE8;
+$color-six: #6892cc;
+$white: #fff;
 
 // Text Color
 $heading-color: $color-one;
-$text-color: $color-two;
+$text-color: $color-three;
 $link-color: $color-one;
+
+// Button Color
+$btn-primary-background-color: $color-three;
+$btn-primary-background-hover-color: darken($color-three, 10%);
+$btn-primary-text-color: $white;
+
+// Topbar Color
+$topbar-background-color: $color-one;
+$topbar-text-color: $white;
+
+// Breadcrumbs
+$breadcrumb-background-color: rgba(199, 218, 232, 0.99);

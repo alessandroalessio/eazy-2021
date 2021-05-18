@@ -1,0 +1,36 @@
+@import "../globals/variables";
+
+body.post-type-archive-staff{
+    .item-staff{
+        text-align: center;
+        border-radius: 2em;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        margin-bottom: 1em;
+        a, a:link, a:hover, a:active, a:visited{
+            text-decoration: none;
+        }
+        picture{
+            display: block;
+            background: $white;
+        }
+        .content{
+            border-top-left-radius: 2em;
+            border-top-right-radius: 2em;
+            background: $color-two;
+            padding: 2em 0;
+            h2{
+                font-size: 1.25em;
+                font-weight: 800;
+            }
+            .role{
+                text-transform: uppercase;
+                font-size: 0.75em;
+                letter-spacing: 0em;
+                // &:before{
+                //     content: ' — ';
+                // }
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@import "../globals/variables";
+
+.btn i.fas{
+    margin-left: 0.5em;
+}
+
+input[type=button],
+input[type=submit],
+.btn-primary,
+.btn-primary:link,
+.btn-primary:visited{
+    background: $btn-primary-background-color;
+    color: $btn-primary-text-color;
+    border: none;
+    outline: none;
+}
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus{
+    background: $btn-primary-background-hover-color;
+    color: $btn-primary-text-color;
+}

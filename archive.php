@@ -1,3 +1,4 @@
+
 <?php get_header(); ?>
 <div class="main-wrapper">
     <div class="container">
@@ -5,7 +6,7 @@
             <?php
             if ( have_posts() ) :
                 while ( have_posts() ) : the_post();
-                    get_template_part('partials/loop/articles');
+                    get_template_part('partials/loop/'.get_post_type());
                 endwhile;
             else :
                 get_template_part('partials/content', 'none');
