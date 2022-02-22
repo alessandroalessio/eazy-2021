@@ -14,4 +14,6 @@
         </div>
     </div>
 </div>
-<?php get_footer(); ?>
+<?php
+$forza_riga_contatti = true;
+get_footer(); ?>

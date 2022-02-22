@@ -12,11 +12,11 @@ var sassOpt = {
  * Requirement
  */
 var gulp = require('gulp');
-var sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 var concat = require('gulp-concat');  
 var rename = require('gulp-rename');  
 var uglify = require('gulp-uglify'); 
-var imagemin = require('gulp-imagemin');
+// var imagemin = require('gulp-imagemin');
 
 /**
  * Sass task Compile
@@ -39,11 +39,18 @@ gulp.task('style-loop', function(done) {
         .pipe(gulp.dest(dist + '/css/loop/'));
     done();
 });
+gulp.task('style-taxonomy', function(done) {
+    gulp.src( src + '/sass/taxonomy/*.scss')
+        .pipe(sass(sassOpt).on('error', sass.logError))
+        .pipe(gulp.dest(dist + '/css/taxonomy/'));
+    done();
+});
 
 gulp.task('styles:watch', function(done) {
     gulp.watch( src + '/sass/**/*.scss', gulp.series('style'));
     gulp.watch( src + '/sass/page-template/*.scss', gulp.series('style-page'));
     gulp.watch( src + '/sass/loop/*.scss', gulp.series('style-loop'));
+    gulp.watch( src + '/sass/taxonomy/*.scss', gulp.series('style-taxonomy'));
     done();
 });
 
@@ -59,7 +66,24 @@ gulp.task('script-package', function(done) {
         .pipe(gulp.dest( dist + '/js/'));
     done();
 });
-
+// gulp.task('style-page', function(done) {
+//     gulp.src( src + '/sass/page-template/*.scss')
+//         .pipe(sass(sassOpt).on('error', sass.logError))
+//         .pipe(gulp.dest(dist + '/css/pages/'));
+//     done();
+// });
+// gulp.task('style-loop', function(done) {
+//     gulp.src( src + '/sass/loop/*.scss')
+//         .pipe(sass(sassOpt).on('error', sass.logError))
+//         .pipe(gulp.dest(dist + '/css/loop/'));
+//     done();
+// });
+gulp.task('script-taxonomy', function(done) {
+    gulp.src( src + '/js/taxonomy/*.js')
+        // .pipe(uglify())
+        .pipe(gulp.dest( dist + '/js/taxonomy/'));
+    done();
+});
 gulp.task('script-package:watch', function(done) {
     gulp.watch( src + '/js/package/**/*.js', gulp.series('script-package'));
     done();
@@ -79,26 +103,27 @@ gulp.task('script-theme', function(done) {
 
 gulp.task('script-theme:watch', function(done) {
     gulp.watch( src + '/js/theme.js', gulp.series('script-theme'));
+    gulp.watch( src + '/js/taxonomy/*.js', gulp.series('script-taxonomy'));
     done();
 });
 
 /**
  * Image task Compile
  */
-gulp.task('images', function (done) {
-    return gulp.src( src + '/img/**/*')
-        .pipe(imagemin({
-            progressive: true
-        }))
-        .pipe(gulp.dest( dist + '/img/'));
-    done();
+// gulp.task('images', function (done) {
+//     return gulp.src( src + '/img/**/*')
+//         .pipe(imagemin({
+//             progressive: true
+//         }))
+//         .pipe(gulp.dest( dist + '/img/'));
+//     done();
 
-});
+// });
 
-gulp.task('images:watch', function(done) {
-    gulp.watch( src + '/img/**/*', gulp.series('images'));
-    done();
-});
+// gulp.task('images:watch', function(done) {
+//     gulp.watch( src + '/img/**/*', gulp.series('images'));
+//     done();
+// });
 
 /**
  * Default Task

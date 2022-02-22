@@ -1,0 +1,50 @@
+$icon-size : 24px;
+.social-icons{
+    text-align: right;
+    display: inline-block;
+    a{
+        display: inline-block;
+        // background: lighten($blue, 30%);
+        // width: $icon-size;
+        // height: $icon-size;
+        // line-height: $icon-size;
+        font-size: $icon-size;
+        border-radius: 20px;
+        text-align: center;
+        color: $black !important;
+        margin-right: 0.5em;
+        position: relative;
+        transition: all 0.2s ease-in-out;
+        i.fab{
+            font-size: 0.9em;
+        }
+        &:hover{
+            // background: lighten($black, 40%);
+            color: lighten($black, 40%);
+        }
+        // &.fb{ 
+        //     background: #3b5998;
+        //     &:hover{
+        //         background: darken(#3b5998, 10%);
+        //     }
+        // }
+        // &.ig{ 
+        //     background: #c13584;
+        //     &:hover{
+        //         background: darken(#c13584, 10%);
+        //     }
+        // }
+        // &.lk{ 
+        //     background: #0077b5;
+        //     &:hover{
+        //         background: darken(#0077b5, 10%);
+        //     }
+        // }
+        // &.yt{ 
+        //     background: #c4302b;
+        //     &:hover{
+        //         background: darken(#c4302b, 10%);
+        //     }
+        // }
+    }
+}

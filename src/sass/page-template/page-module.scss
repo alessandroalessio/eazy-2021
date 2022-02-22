@@ -1,0 +1,110 @@
+/*@import "../globals/variables";
+
+body.page-template-page-module{
+    .owl-carousel{
+        // box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        .item{
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: block;
+            width: 100%;
+            min-height: 440px;
+            background-position: center center;
+        }
+        .owl-nav .owl-next, .owl-nav .owl-prev {
+            position: absolute;
+            top: 48%;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            background: $color-one;
+            color: $white;
+            width: 40px;
+            height: 40px;
+            border-radius: 3em;
+            span{
+                font-size: 2em;
+                line-height: 0.6em;
+                display: block;
+                width: 100%;
+            }
+        }
+        .owl-nav .owl-next {
+            right: 0;
+            display: flex;
+            margin-right: 2%;
+            font-size: 25px !important;
+        }
+        .owl-nav .owl-prev{
+            left: 0;
+            display: flex;
+            margin-left: 2%;
+            font-size: 25px !important;
+        }
+    }
+    // Contact Form 7
+    .wpcf7{
+        padding: 0em;
+        margin-bottom: 2em;
+        border: none;
+        label{ display: block; }
+
+        fieldset{
+            display: block;
+            border: 1px solid lighten($color-two, 20%);
+            padding: 1em;
+            margin-bottom: 2em;
+            legend{
+                background: $color-one;
+                display: inline-block;
+                margin-left: 1em;
+                font-size: 1em;
+                text-transform: uppercase;
+                color: $white;
+                width: auto;
+                padding: 0.1em 1em;
+                font-weight: 800;
+            }
+        }
+
+        input[type=text],
+        input[type=password],
+        input[type=email],
+        input[type=number],
+        input[type=tel],
+        input[type=date],
+        select,
+        textarea{
+            display: block;
+            width: 100%;
+            background-color: lighten($color-two, 25%);
+            padding: 0.75em;
+            border: none;
+        }
+
+        select{
+            padding: 1.25em;
+        }
+
+        .wpcf7-checkbox{
+            .wpcf7-list-item{
+                display: block;
+                width: 100%;
+            }
+            span.wpcf7-list-item-label{
+                text-transform: capitalize;
+                margin-left: 1em;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) { 
+	body.page-template-page-home{
+        .owl-carousel{
+            .item{
+                min-height: 200px;
+            }
+        }
+    }
+}
+*/

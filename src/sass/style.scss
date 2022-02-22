@@ -14,16 +14,28 @@
 -----------------------------------------------------------------------------------*/
 
 // Requirements
-// @import "../../node_modules/bootstrap/scss/bootstrap";
+@import "globals/_variables"; // Customization for Bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap";
 
 // Globals
-@import "globals/_variables";
+// @import "globals/_custom-pointer";
 @import "globals/_base";
+@import "globals/_social-icons";
+@import "globals/_mixin";
+@import "globals/_animations";
 @import "globals/_buttons";
 @import "globals/_commons";
-@import "globals/_topbar";
+// @import "globals/_topbar";
 @import "globals/_header";
 @import "globals/_navbar";
+@import "globals/_fullsize-menu";
 @import "globals/_footer";
 @import "globals/_main";
-@import "globals/_breadcrumb";
+// @import "globals/_breadcrumb";
+// @import "globals/_sidebar";
+@import "globals/_woocommerce";
+
+
+// Page
+// @import "page-template/page-home";
+// @import "page-template/page-contacts";

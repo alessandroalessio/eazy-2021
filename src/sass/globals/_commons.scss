@@ -1,5 +1,4 @@
-@import "_variables";
-
+/*
 // Text
 .text-column-2{
     column-count: 2;
@@ -9,8 +8,27 @@
         column-count: 1;
     }
 }
+*/
+.title{
+    font-weight: 800;
+    font-family: $font-family-serif;
+
+    &.before-square:before{
+        content: ' ';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: $orange;
+        margin-right: 0.5em;
+
+    }
+}
+
+// Background
+.background-size{ background-size: cover; }
 
 // Icons
+/*
 .icon-social{
     border: 2px solid $white;
     width: 26px;
@@ -51,7 +69,7 @@
 // Thumb
 .thumb-wrapper{
     border-radius: 2em;
-    border-top:10px solid $color-five;
+    // border-top:10px solid $color-five;
     overflow: hidden;
 
     picture,
@@ -63,7 +81,7 @@
         max-width: 100%;
     }
 }
-
+*/
 // WP Gallery
 .wp-gallery{
     margin-top: 2em;
@@ -79,8 +97,8 @@
             display: block;
             width: 100%;
             min-height: 250px;
-            background-color: $color-one;
-            opacity: 0.3;
+            background-color: $white;
+            opacity: 0.2;
             transition: all 0.2s ease-in-out;
         }
 
@@ -96,6 +114,60 @@
 .wpcf7{
     padding: 2em;
     margin-bottom: 2em;
-    border: 5px solid lighten($color-two, 13%);
     label{ display: block; }
+    .one-half{
+        width: 48%;
+        margin-right: 4%;
+        float: left;
+    }
+    .one-third{
+        width: 30%;
+        margin-right: calc(10%/2);
+        float: left;
+    }
+    .one-fourth{
+        width: 24%;
+        margin-right: calc(4%/3);
+        float: left;
+    }
+    .offset-one-half{ margin-left: calc(100%/2); }
+    .offset-one-third{ margin-left: calc(100%/3); }
+    .offset-one-fourth{ margin-left: calc(100%/4); }
+    .last{
+        margin-right: 0;
+    }
+}
+
+// Hero
+.hero{
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    padding: 8em;
+    position: relative;
+    h1{
+        font-family: $font-family-serif;
+        font-weight: 600;
+        margin: 0;
+        padding: 0;
+        z-index: 10;
+        text-shadow: 0 0 10px #000;
+    }
+    &:after{
+        content: ' ';
+        background-color: rgba(0, 0, 0, 0.1);
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+}
+
+// Helpers
+.relative{ position: relative; }
+
+@media screen and (max-width: 1199px) {
+    .hidden-tablet{ display: none; }
 }

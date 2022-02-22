@@ -1,14 +1,18 @@
 @import "_variables";
 
 body{
-    font-family: $primary-font;
-    color: $text-color;
+    overflow-x: hidden;
 }
 
-a, a:link, a:visited{
-    color: $color-one;
+a{
+    color: $color1;
+    &:hover,
+    &:active{
+        color: darken($color1, 10%);
+        text-decoration: none;
+    }
 }
-
+/*
 label{
     font-size: 0.8em;
     text-transform: uppercase;
@@ -19,15 +23,35 @@ label{
     font-weight: 800;
 }
 
+h2, h3, h4, h5, h6{
+    font-weight: 600;
+    color: $color-two;
+    &:before{
+        content: ' ';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: $orange;
+    }
+}
+*/
+
 input[type=text],
 input[type=password],
 input[type=email],
+input[type=tel],
+input[type=number],
+input[type=date],
+select,
 textarea{
     display: block;
     width: 100%;
-    background-color: lighten($color-two, 12%);
     padding: 0.75em;
     border: none;
+}
+
+select{
+    padding: 1.25em;
 }
 
 input[type=button],

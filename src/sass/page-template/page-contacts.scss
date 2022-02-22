@@ -1,0 +1,87 @@
+@import "../globals/_variables"; // Customization for Bootstrap
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+body.page-template-page-contacts{
+    h1{
+        margin: 1em 0;
+        font-weight: 700;
+        text-align: center;
+    }
+    .main-wrapper{
+        padding: 3em 0 0 0;
+    }
+    .row-contact-form{
+        // background-color: $gray-100;
+        input[type=text],
+        input[type=email],
+        input[type=phone]{
+            width: 100%;
+            display: inline-block;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            color: $color1;
+            border: 1px solid lighten($color1, 60%);
+            &:focus{
+                outline: $color1;
+            }
+        }
+        textarea{
+            color: $color1;
+            border: 1px solid lighten($color1, 60%);
+            &:focus{
+                outline: $color1;
+            }
+        }
+        label{
+            margin-bottom: .5em;
+            text-align: left;
+            font-size: 0.8em;
+            text-transform: uppercase;
+            margin-bottom: 1em;
+            small{
+                display: block;
+                width: 100%;
+            }
+        }
+        .choice{
+            span{ display: block; }
+            display: block;
+            span.wpcf7-list-item-label{
+                width: 100%;
+                // margin-right: 1%;
+                // margin-left: 0;
+                // margin-bottom: 0.5em;
+                display: block;
+                background-color: $white;
+                border: 1px solid $blue;
+                color: $blue;
+                text-align: center;
+                padding: 0.5em 0;
+                transition: all 0.2s ease-in-out;
+                // &:nth-child(3),
+                // &:nth-child(6){
+                //     margin-right: 0;
+                // }
+                cursor: pointer;
+            }
+            input{ display: none; }
+            input:checked+span.wpcf7-list-item-label{
+                background: $blue;
+                color: $white;
+            }
+        }
+        a{
+            color: $color2;
+            &:hover,
+            &:after{
+                color: darken($color2, 15%);
+            }
+        }
+        .btn{
+            border: 1px solid $blue;
+            border-radius: 0px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+    }
+}

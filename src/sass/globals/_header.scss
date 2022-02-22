@@ -1,6 +1,69 @@
-@import "_variables";
-
 header{
-    border-bottom: 1px solid $color-two;
-    padding: 0.5em 0;
+    padding: 3em 0 0 0;
+    &> .container{
+        padding-bottom: 2em;
+    }
+    .header-logo {
+        display: inline-block;
+        width: auto;
+        padding: 0;
+        img{
+            max-width: 300px;
+        }
+    }
+    .icon-whatsapp{
+        color: #25d366;
+        font-size: 1.5em;
+    }
+    #fullsize-menu-toggler{
+        cursor: pointer;
+        span{
+            text-transform: uppercase;
+            letter-spacing: 0.4em;
+            font-size: 0.7em;
+            display: inline-block;
+            margin-right: 1em;
+        }
+    }
+    .right{
+        text-align: right;
+        .navbar{
+            li{
+                margin-left: 1em;
+                a{
+                    text-transform: uppercase;
+                    letter-spacing: 0.1em;
+                    font-size: 0.8em;
+                }
+            }
+        }
+        .navbar-brand{ display: none; }
+    }
+    .extra-navbar{
+        text-align: right;
+        .icon-header{
+            display: inline-block;
+            margin: 0 0.15em;
+            ion-icon{
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    header{
+        .header-logo img{
+            max-width: 250px;
+            margin-bottom: 1em;
+        }
+        .right{
+            text-align: center;
+        }
+        .icon-whatsapp{
+            font-size: 2.1em;
+            display: inline-block;
+            transform: translate(-6px, 7px);
+        }
+    }
 }

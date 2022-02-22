@@ -1,61 +1,35 @@
-@import "../globals/variables";
+@import "../globals/_variables"; // Customization for Bootstrap
+@import "../globals/_mixin";
+// @import "../../../node_modules/bootstrap/scss/bootstrap";
+
 
 body.page-template-page-home{
-    .owl-carousel{
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-        .item{
-            background-repeat: no-repeat;
-            background-size: cover;
-            display: block;
-            width: 100%;
-            min-height: 440px;
-            background-position: center center;
-        }
-        .owl-nav .owl-next, .owl-nav .owl-prev {
-            position: absolute;
-            top: 48%;
-            transform: translateY(-50%);
-            -webkit-transform: translateY(-50%);
-            background: $color-one;
-            color: $white;
-            width: 40px;
-            height: 40px;
-            border-radius: 3em;
-            span{
-                font-size: 2em;
-                line-height: 0.6em;
-                display: block;
-                width: 100%;
-            }
-        }
-        .owl-nav .owl-next {
-            right: 0;
-            display: flex;
-            margin-right: 2%;
-            font-size: 25px !important;
-        }
-        .owl-nav .owl-prev{
-            left: 0;
-            display: flex;
-            margin-left: 2%;
-            font-size: 25px !important;
-        }
-    }
-    #section-1{
-        padding-top: 6em;
-        padding-bottom: 6em;
-        h3{
-            color: $color-six;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.9em;
-        }
-        .text-wrapper{
-            font-size: 1.2em;
-            line-height: 1.6em;
-        }
-    }        
-    .home-services{
+   
+    // .alt-section{
+    //     padding-top: 6em;
+    //     padding-bottom: 6em;
+    //     h3{
+    //         // color: $orange;
+    //         text-transform: uppercase;
+    //         letter-spacing: 1px;
+    //         font-size: 0.9em;
+    //         font-weight: 800;
+    //         padding-right: 40%;
+    //     }
+    //     h2{
+    //         font-weight: 800;
+    //         // color: $blue;
+    //         padding-right: 40%;
+    //     }
+    //     .text-wrapper{
+    //         font-size: 1.2em;
+    //         line-height: 1.6em;
+    //         padding-right: 10%;
+    //     }
+    // }
+
+    /*
+    .home-events{
         background-color: $color-two;
         padding-top: 6em;
         padding-bottom: 6em;
@@ -64,24 +38,40 @@ body.page-template-page-home{
             text-transform: uppercase;
             letter-spacing: 1px;
             font-size: 0.9em;
+            font-weight: 800;
         }
-        .item-services{
+        h2{
+            font-weight: 800;
+            color: $color-one;
+            margin-bottom: 2em;
+        }
+        .item-events{
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 2em;
             margin-bottom: 1.5em;
             overflow: hidden;
-            border-top: 10px solid $color-three;
+            // border-top: 10px solid $color-three;
             background: $white;
             .img-wrapper{
                 background: url('../../../build/img/no-image.jpg') no-repeat center center;
                 background-size: cover;
                 min-height: 200px;
                 display: block;
+                a{
+                    display: block;
+                    picture, img{
+                        display: block;
+                        width: 100%;
+                        max-width: 100%;
+                        height: auto;
+                    }
+                }
             }
             .content{
                 padding: 3em;
                 h2{
                     font-size: 1.2em;
+                    font-weight: 800;
                     text-transform: uppercase;
                 }
                 .excerpt{
@@ -93,71 +83,100 @@ body.page-template-page-home{
             }
         }
     }
-    .home-teams{
-        padding-top: 6em;
-        padding-bottom: 6em;
-        h3{
-            color: $color-six;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.9em;
-        }
-        .link-wrapper{
-            margin-top: 3em;
-            a{
-                &:before{
-                    content: '----';
-                    letter-spacing: -2px;
-                    margin-right: 1em;
-                }
-                &:hover,
-                &:active{
-                    text-decoration: none;
-                }
+    .home-post{
+        background: #f4f5f6;
+    }
+    */
+    // #section-1{
+    //     padding-top: 8em !important;
+    // }
+}
+
+body.page-template-page-home .home-catalogue-wrapper{
+    margin-bottom: 2em;
+    .parent-section{
+        font-size: 2.3em !important;
+    }
+    .child-wrapper{
+        margin-bottom: 3em;
+        .left-side{
+            margin: 2em;
+            .sub-title{
+                color: $color2;
+                margin-bottom: 1em;
+                text-transform: uppercase;
+                letter-spacing: 0.15em;
+                font-size: 0.8em;
+                font-weight: 800;
             }
-            .button{
-                margin: 0 2em;
-                a, a:link, a:visited{
-                    &:before{
-                        content: '';
-                        margin-right: 0em;
-                    }
-                    background: $btn-primary-background-color;
-                    color: $btn-primary-text-color;
-                    font-size: 1.1em;
-                    padding: 0.5em 2em;
-                    display: inline-block;
-                    border-radius: 2em;
-                }
-                a:hover,
-                a:active,
-                a:focus{
-                    background: $btn-primary-background-hover-color;
-                    color: $btn-primary-text-color;
-                }
+            .description{
+                font-family: 'Quicksand', sans-serif;
+                font-size: 34px;
+                line-height: 38px;
+                margin: 1em 0;
             }
+            
         }
     }
 }
 
+
+// body.page-template-page-home .home-services{
+//     padding-top: 4em;
+//     padding-bottom: 8em;
+//     background: #fbfbfb;
+//     .title{
+//         font-size: 2.5rem !important;
+//         color: $light-blue;
+//         &:before{
+//             content: ' ';
+//             display: block;
+//             min-height: 20px;
+//             background: url('../../../build/img/drop.png') no-repeat center center;
+//         }
+//     }
+//     .servizi-text{ 
+//         margin-top: 4em;
+//         margin-bottom: 1em;
+//         font-style: italic;
+//     }
+//     .item-servizi{
+//         @include loop-item-service-classes;
+//     }
+// }
+
+// body.page-template-page-home .home-post{
+//     background: url('../../../build/img/bg-giovani.png') no-repeat top center;
+//     background-size: cover;
+//     padding: 8em 0;
+//     h4{
+//         font-size: 2.5em;
+//         margin-bottom: 2em;
+//     }
+//     .item-post{
+//         @include loop-item-post-classes;
+//     }
+// }
+
+// body.page-template-page-home .home-banner{
+//     min-height: 405px;
+//     .banner-title{
+//         color: $light-blue;
+//         font-size: 2.5em;
+//         padding: 2em 1em 0 1em;
+//         font-weight: 800;
+//         text-align: left;
+//     }
+//     .banner-text{
+//         font-size: 1.5em;
+//         margin-bottom: 2em;
+//         display: inline-block;
+//         padding: 0 1.7em;
+//         text-align: left;
+//         font-style: normal;
+//         font-weight: 800;
+//     }
+// }
+
 @media only screen and (max-width: 767px) { 
-	body.page-template-page-home{
-        .owl-carousel{
-            .item{
-                min-height: 200px;
-            }
-        }
-        #section-1{
-            .text-wrapper{
-                padding-top: 1em;
-                padding-bottom: 1em;
-            }
-        }        
-        .link-wrapper{
-            a{
-                display: block;
-                margin: 1em 0;
-            }
-        }
-    }
 }

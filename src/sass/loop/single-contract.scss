@@ -1,0 +1,45 @@
+@import "../globals/variables";
+
+body.single-contract{
+    .gallery-wrapper{
+        position: relative;
+        .item{
+            .didascalia{
+                font-size: 0.9em;
+                margin-top: 2em;
+                font-style: italic;
+            }
+        }
+        .owl-theme .owl-nav{
+            position: absolute;
+            top: 30%;
+            left: 0;
+            width: 100%;
+            button.owl-prev,
+            button.owl-next{
+                width: 40px;
+                height: 40px;
+                border-radius: 2em;
+                text-align: center;
+                font-size: 1.5em;
+                line-height: 1.9em;
+                color: $orange;
+                &:hover,
+                &:active{
+                    background: $orange;
+                    color: #fff;
+                }
+            }
+            button.owl-prev{
+                float: left;
+            }
+            button.owl-next{
+                float: right;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 767px) { 
+    body.single-contract{
+    }
+}

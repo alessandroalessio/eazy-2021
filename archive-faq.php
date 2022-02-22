@@ -3,7 +3,10 @@
 <div class="main-wrapper">
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-md-12">
+                <h1 class="text-center">Faq</h1>
+            </div>
+            <div class="col-md-8 offset-md-2">
                 <?php
                 if ( have_posts() ) :
                     while ( have_posts() ) : the_post(); ?>

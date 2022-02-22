@@ -1,50 +1,46 @@
-@import "_variables";
-
-.navbar{
-    .nav-link{
-        padding-right: 1em;
-        padding-left: 1em;
-    }
-    a, a:link, a:visited{
-        color: $text-color;
-        display: inline-block;
-        text-transform: uppercase;
-        font-size: 0.9em;
-        font-weight: 800;
-        letter-spacing: 0.1em;
-        padding-right: 1.5rem;
-        padding-left: 1.5rem;
-    }
-    .navbar-toggler{
-        // border: 1px solid $color-five;
-        .fa-bars{
-            color: $color-one;
-            font-size: 1.35em;
-        }
-    }
-    .navbar-brand{
-        display: none;
-        text-transform: uppercase;
-        font-size: 1em;
-        font-weight: 800;
-        margin-left: 1.3em;
-    }
-    .navbar-nav{
-        .dropdown-menu{
-            border: 0;
-            background-color: $color-five;
-        }
-    }
-}
-
-@media only screen and (max-width: 767px) { 
-    .navbar-wrapper{
-        border-top: 1px solid $color-five;
-        .navbar{
-            padding: .5rem 1rem 0 1rem;
-        }
-        .navbar-brand{
+.nav-wrapper-full{
+    // background: $light-blue;
+    margin-top: 3em;
+    .navbar{
+        margin: 0;
+        padding: 0;
+        .navbar-brand{ opacity: 0; }
+        a, a:link, a:visited{
             display: inline-block;
+            font-size: 0.9em;
+            font-weight: 400;
+            padding-right: 1rem !important;
+            padding-left: 1rem !important;
+            color: $white;
+            text-transform: uppercase;
+            transition: all 0.2s ease-in-out;
+            margin: 0.55em;
+        }
+        li.show,
+        li:hover,
+        li:active{
+            // background: lighten($light-blue, 10%);
+        }
+        li.highlighted{
+            a.nav-link{
+                border: 2px solid $orange;
+            }
+        }
+        .dropdown-menu{
+            // background: $light-blue;
+            color: $white;
+            border-radius: 0px;
+            box-shadow: none;
+            li{
+                padding: 0;
+                margin: 0;
+                .dropdown-item{
+                    &:active,
+                    &:hover{
+                        background: transparent;
+                    }
+                }
+            }
         }
     }
 }

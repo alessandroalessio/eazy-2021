@@ -1,0 +1,81 @@
+.sidebar-menu-wrapper{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 0vw;
+    height: 100vh;
+    z-index: 999;
+    background: rgba(#000000, 0.5);
+    overflow-x: hidden;
+    transition: all 0.5s ease-in-out;
+
+    .nav-wrapper{
+        background: $primary;
+        color: $white;
+        width: 20%;
+        height: 100vh;
+        padding-top: 5em;
+        margin-left: -20em;
+        transition: all 0.5s ease-in-out;
+
+        .close{
+            display: block;
+            padding-right: 3em;
+            color: #fff;
+            font-size: 0.7em;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            font-weight: 100;
+            margin-bottom: 4em;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        ul{
+            width: 100%;
+            display: block;
+            margin: 0;
+            padding: 0;
+            li{
+                display: block;
+                a{
+                    color: $white;
+                    letter-spacing: 0.2em;
+                    text-transform: uppercase;
+                    padding: 0 0 1em 0;
+                    margin: 0 0 1em 0;
+                    border-bottom: 1px solid rgba($white, 0.3);
+                }
+            }
+        }
+    }
+    .dropdown-menu{
+        background: transparent;
+        display: block !important;
+        position: relative !important;
+        border: none;
+        text-indent: 0.5em;
+
+        li a{
+            background: transparent;
+            font-weight: 400;
+            font-style: italic;
+            padding: 0rem 1.5rem;
+        }
+    }
+
+    &.active{
+        width: 100vw;
+        .nav-wrapper{
+            margin-left: -0em;
+        }
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .sidebar-menu-wrapper{
+        .nav-wrapper{
+            width: 100%;
+        }
+    }
+}

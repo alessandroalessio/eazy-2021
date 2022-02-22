@@ -1,0 +1,23 @@
+@media screen and (min-width: 769px) {
+    :root {
+        cursor: none;
+        --cursorX: 50vw;
+        --cursorY: 50vh;
+    }
+    a{
+        cursor: none;
+    }
+    #pointer{
+        display: inline-block;
+        background-color: #544689;
+        opacity: 0.6;
+        width: 10px;
+        height: 10px;
+        border-radius: 2em;
+        position: fixed;
+        z-index: 9999;
+    }    
+}
+@media screen and (min-width: 768px) {
+    #pointer{ display: none; }
+}

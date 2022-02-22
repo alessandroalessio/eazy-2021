@@ -100,4 +100,12 @@ if ( !function_exists('eazy_is_blog') ) {
         return ( is_archive() || is_author() || is_category() || is_home() || is_single() || is_tag()) && 'post' == get_post_type();
     }
 }
+/**
+ * Var Dump Short
+ */
+if ( !function_exists('vd') ) {
+    function vd($obj) {
+        echo '<pre style="background: #eee; margin: 1em; padding: 1em; border: 1px solid #ddd; border-radius: 0.5em;">'; var_dump($obj); echo '</pre>';
+    }
+}
 ?>
