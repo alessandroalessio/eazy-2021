@@ -23,6 +23,7 @@ if ( !function_exists('eazy_2021_theme_setup') ) {
             case '1': $prefooter_column_size = 12; break;
             case '2': $prefooter_column_size = 6; break;
             case '3': $prefooter_column_size = 4; break;
+            default:
             case '4': $prefooter_column_size = 3; break;
         }
         register_sidebar( array(
