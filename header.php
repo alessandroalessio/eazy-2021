@@ -12,7 +12,8 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<?php $body_classes = ( eazy_get_option('header_fixed_on_scroll') ) ? 'fix-header-on-scroll' : ''; ?>
+<body <?php body_class( $body_classes ); ?>>
 
 <?php if ( eazy_get_option('global_show_preloader') ) : ?>
   <div id="loader"><p class="loader-logo" style="background-image: url('<?php echo eazy_get_option('global_custom_preloader_image'); ?>');"></p></div>
@@ -36,18 +37,13 @@ endif;
 <header>
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-md-6 col-8">
+      <div class="col-md-2 col-12">
         <?php get_template_part('partials/header', 'logo'); ?>
       </div>
-      <div class="col-md-5 pr-0 d-none d-md-block right">
-        <div class="d-md-inline-block d-none">
+      <div class="col-md-10 col-12 d-md-block right">
+        <div class="d-md-inline-block">
           <?php get_template_part('partials/header', 'navbar'); ?>
         </div>
-      </div>
-      <div class="col-md-1 col-4 pl-0 extra-navbar">
-        <?php get_template_part('partials/icon', 'search'); ?>
-        <?php get_template_part('partials/icon', 'login'); ?>
-        <?php get_template_part('partials/icon', 'cart'); ?>
       </div>
     </div>
   </div>

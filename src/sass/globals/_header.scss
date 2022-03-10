@@ -1,4 +1,5 @@
 header{
+    background: url('build/img/header-border-top.png') #fff repeat-x top left;
     padding: 3em 0 0 0;
     &> .container{
         padding-bottom: 2em;
@@ -8,7 +9,9 @@ header{
         width: auto;
         padding: 0;
         img{
-            max-width: 300px;
+            max-width: 115px;
+            width: 100%;
+            transition: all 0.2s ease-in-out;
         }
     }
     .icon-whatsapp{
@@ -27,17 +30,6 @@ header{
     }
     .right{
         text-align: right;
-        .navbar{
-            li{
-                margin-left: 1em;
-                a{
-                    text-transform: uppercase;
-                    letter-spacing: 0.1em;
-                    font-size: 0.8em;
-                }
-            }
-        }
-        .navbar-brand{ display: none; }
     }
     .extra-navbar{
         text-align: right;
@@ -53,12 +45,17 @@ header{
 
 @media screen and (max-width: 767px) {
     header{
-        .header-logo img{
-            max-width: 250px;
-            margin-bottom: 1em;
+        .header-logo{
+            margin: 0 auto;
+            display: block;
+            img{
+                max-width: 150px;
+                margin-bottom: 1em;
+            }
         }
         .right{
             text-align: center;
+            border-top: 1px solid lighten($color1, 10%);
         }
         .icon-whatsapp{
             font-size: 2.1em;

@@ -34,15 +34,22 @@ if (!function_exists('eazy_option')){
 if (!function_exists('eazy_img')){
     function eazy_img($input, $alt=""){
         if (filter_var($input, FILTER_VALIDATE_URL)) {
-            $img_src = str_replace( get_site_url(), '', $input);
+            $site_url_clean = str_replace( ['https://', 'http://'], '', get_site_url() );
+            $img_src = str_replace( [$site_url_clean, 'https://', 'http://'], '', $input);
             $img_path = rtrim(ABSPATH, '/').$img_src;
             $img_data = getimagesize($img_path);
 
-            // echo '<picture>';
-            //     echo '<source srcset="'.$input.'.webp" type="image/webp">';
-            //     echo '<source srcset="'.$input.'" type="image/png">';
+            // if (defined('WEBPEXPRESS_PLUGIN')) {
+            //     $webp_src = str_replace( ['wp-content/', '.png', '.jpg'], ['wp-content/webp-express/webp-images/', '', ''], $img_src);
+            //     // vd($webp_src);
+            //     echo '<picture>';
+            //         echo '<source srcset="'.$input.'.webp" type="image/webp">';
+            //         echo '<source srcset="'.$input.'" type="image/png">';
+            //         echo '<img src="'.$input.'" alt="'.$alt.'" '.$img_data[3].' class="img-fluid">';
+            //     echo '</picture>';
+            // } else {
                 echo '<img src="'.$input.'" alt="'.$alt.'" '.$img_data[3].' class="img-fluid">';
-            // echo '</picture>';
+            // }
         }
     }
 }

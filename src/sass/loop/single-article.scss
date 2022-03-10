@@ -11,7 +11,7 @@ body.single-post{
     }
     .content-wrapper{
         .date{
-            color: $orange;
+            // color: $orange;
             margin-bottom: 1em;
         }
         ul{
@@ -20,7 +20,7 @@ body.single-post{
             li{
                 list-style-type: square;
                 &::marker{
-                    color: $orange;
+                    // color: $orange;
                 }
             }
         }

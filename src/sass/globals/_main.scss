@@ -7,10 +7,11 @@
     h2,h3,h4{
         font-weight: 800;
         margin-top: 1.5em;
-        &:before{
-            content: '─';
-            margin-right: 0.5em;
-        }
+        color: $color1;
+        // &:before{
+        //     content: '─';
+        //     margin-right: 0.5em;
+        // }
     }
     .wpcf7{
         input[type=text],

@@ -35,27 +35,22 @@ get_template_part('partials/page-hero');
     </div>
     
     <?php 
-    $contact_form = get_field('contact_form');
-    if ( isset($contact_form->ID) ) { ?>
+    $contact_form = get_field('module_contacts');
+    $contact_form_id = ( is_int($contact_form) ) ? $contact_form : $contact_form->ID;
+    if ( isset($contact_form_id) ) { ?>
         <div class="row-contact-form pt-4 pb-4">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-10 offset-md-1">
-                        <?php echo do_shortcode('[contact-form-7 id="'.$contact_form->ID.'"]'); ?>
+                    <div class="col-md-6 contact-form-wrapper">
+                        <?php echo do_shortcode('[contact-form-7 id="'.$contact_form_id.'"]'); ?>
+                    </div>
+                    <div class="col-md-6 contact-maps">
+                        <?php get_template_part('partials/general-maps'); ?>
                     </div>
                 </div>
             </div>
         </div>
     <?php } ?>
     
-    <div class="container">
-        <div class="row">    
-            <?php
-            $maps = get_field('maps');
-            if ( eazy_get_option('third_parts_google_maps_apikey') && $maps ) : ?>
-                <div class="col-12"><?php echo $maps ?></div>
-            <?php endif; ?>
-        </div>
-    </div>
 </div>
 <?php get_footer(); ?>

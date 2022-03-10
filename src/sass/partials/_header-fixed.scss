@@ -1,0 +1,13 @@
+.header-fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    transition: all 0.2s ease-in-out;
+    &.active{
+        header{ padding: 0.5em 0 0 0; }
+        header > .container{ padding-bottom: 0.5em; }
+        header .header-logo img{ max-width: 85px; }
+    }
+}

@@ -23,15 +23,15 @@
           <?php echo get_template_part('partials/footer', 'logo'); ?>
         </div>
       <?php endif; ?>
-      <div class="col-md-6 footer-text">
-        <p><?php eazy_option('footer_text') ?></p>
+      <div class="col-12 footer-text text-center">
+        <div><?php eazy_option('footer_text') ?></div>
+        <div><?php echo do_shortcode('[social_icons][/social_icons]'); ?></div>
       </div>
-      <div class="col-md-6 right">
+      <!-- <div class="col-md-6 right">
         <div class="footer-nav-wrapper">
           <?php echo get_template_part('partials/footer', 'navbar'); ?>
         </div>
-        <?php echo do_shortcode('[social_icons][/social_icons]'); ?>
-      </div>
+      </div> -->
     </div>
   </div>
 </footer>

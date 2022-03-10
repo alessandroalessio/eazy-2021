@@ -77,6 +77,17 @@ function eazy_2021_customize_register( $wp_customize ) {
          'section'   => 'eazy_2021_header_section',
          'settings'  => 'eazy_2021_header_logo'
       ) ) );
+      // Header Fixed on Scroll
+    $wp_customize->add_setting( 'eazy_2021_header_fixed_on_scroll' , array(
+         'default'		=> '',
+   ) );
+   $wp_customize->add_control( 'eazy_2021_header_fixed_on_scroll', array(
+      'id'        => 'eazy_2021_header_fixed_on_scroll', 
+      'type'      => 'checkbox',
+      'label'     => __( 'Fixed on Scroll', 'eazytheme' ),
+      'section'   => 'eazy_2021_header_section',
+      'settings'  => 'eazy_2021_header_fixed_on_scroll'
+   ) );
       
    /**
     * Navigation Section

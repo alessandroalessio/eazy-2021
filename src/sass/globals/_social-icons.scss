@@ -1,3 +1,5 @@
+@import "../globals/_variables"; // Customization for Bootstrap
+
 $icon-size : 24px;
 .social-icons{
     text-align: right;
@@ -11,7 +13,7 @@ $icon-size : 24px;
         font-size: $icon-size;
         border-radius: 20px;
         text-align: center;
-        color: $black !important;
+        color: $black;
         margin-right: 0.5em;
         position: relative;
         transition: all 0.2s ease-in-out;
@@ -22,18 +24,22 @@ $icon-size : 24px;
             // background: lighten($black, 40%);
             color: lighten($black, 40%);
         }
-        // &.fb{ 
-        //     background: #3b5998;
-        //     &:hover{
-        //         background: darken(#3b5998, 10%);
-        //     }
-        // }
-        // &.ig{ 
-        //     background: #c13584;
-        //     &:hover{
-        //         background: darken(#c13584, 10%);
-        //     }
-        // }
+        &.fb{ 
+            // background: $facebook-color;
+            color: $facebook-color;
+            &:hover{
+                // background: darken($facebook-color, 10%);
+                color: darken($facebook-color, 10%);
+            }
+        }
+        &.ig{ 
+            // background: $instagram-color;
+            color: $instagram-color;
+            &:hover{
+                // background: darken($instagram-color, 10%);
+                color: darken($instagram-color, 10%);
+            }
+        }
         // &.lk{ 
         //     background: #0077b5;
         //     &:hover{

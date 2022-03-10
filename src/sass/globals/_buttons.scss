@@ -9,7 +9,7 @@ input[type=submit],
 .btn-primary,
 .btn-primary:link,
 .btn-primary:visited{
-    background: $color2 !important;
+    background: $color1;
     color: $white;
     border: none;
     border-radius: 0px;
@@ -21,23 +21,29 @@ input[type=submit],
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary:focus{
-    background: darken($color2, 15%) !important;
+    background: darken($color1, 15%);
     color: $white;
     outline: none;
 }
 
-// .btn-secondary,
-// .btn-secondary:link,
-// .btn-secondary:visited{
-//     background: $btn-secondary-background-color;
-//     color: $btn-secondary-text-color;
-//     border: none;
-//     outline: none;
-// }
-// .btn-secondary:hover,
-// .btn-secondary:active,
-// .btn-secondary:focus{
-//     background: $btn-secondary-background-hover-color;
-//     color: $btn-secondary-text-color;
-//     outline: none;
-// }
+.btn-secondary,
+.btn-secondary:link,
+.btn-secondary:visited{
+    background: $color2;
+    color: $white;
+    border: none;
+    outline: none;
+    border: none;
+    border-radius: 0px;
+    outline: none;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    letter-spacing: 0.15em;
+}
+.btn-secondary:hover,
+.btn-secondary:active,
+.btn-secondary:focus{
+    background: darken($color2, 15%);
+    color: $white;
+    outline: none;
+}

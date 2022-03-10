@@ -1,46 +1,71 @@
-.nav-wrapper-full{
-    // background: $light-blue;
-    margin-top: 3em;
-    .navbar{
-        margin: 0;
-        padding: 0;
-        .navbar-brand{ opacity: 0; }
-        a, a:link, a:visited{
+.navbar{
+    margin: 1em 0 0 0;
+    padding: 0;
+    .navbar-brand{ 
+        opacity: 0;
+        display: none !important;
+    }
+    a{
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 400;
+        padding-right: 1.5em !important;
+        padding-left: 0em !important;
+        // color: $white;
+        text-transform: none;
+        transition: all 0.2s ease-in-out;
+        margin: 0.55em 0;
+        position: relative;
+        overflow: hidden;
+        &:before{
+            content: ' ';
+            width: 35px;
+            height: 3px;
             display: inline-block;
-            font-size: 0.9em;
-            font-weight: 400;
-            padding-right: 1rem !important;
-            padding-left: 1rem !important;
-            color: $white;
-            text-transform: uppercase;
-            transition: all 0.2s ease-in-out;
-            margin: 0.55em;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            background-color: $orange;
+            transform: translateX(-35px);
+            transition: all 0.5s ease-in-out;
         }
-        li.show,
-        li:hover,
-        li:active{
-            // background: lighten($light-blue, 10%);
+    }
+    li.show,
+    li:hover,
+    li:active{
+        // background: lighten($light-blue, 10%);
+        a:before{
+            transform: translateX(0px);
         }
-        li.highlighted{
-            a.nav-link{
-                border: 2px solid $orange;
-            }
+    }
+    li.highlighted{
+        a.nav-link{
+            border: 2px solid $orange;
         }
-        .dropdown-menu{
-            // background: $light-blue;
-            color: $white;
-            border-radius: 0px;
-            box-shadow: none;
-            li{
-                padding: 0;
-                margin: 0;
-                .dropdown-item{
-                    &:active,
-                    &:hover{
-                        background: transparent;
-                    }
+    }
+    .dropdown-menu{
+        // background: $light-blue;
+        color: $white;
+        border-radius: 0px;
+        box-shadow: none;
+        li{
+            padding: 0;
+            margin: 0;
+            .dropdown-item{
+                &:active,
+                &:hover{
+                    background: transparent;
                 }
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) { 
+    .navbar{
+        .navbar-brand{ 
+            opacity: 1;
+            display: inline-block !important;
         }
     }
 }

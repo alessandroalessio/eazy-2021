@@ -1,0 +1,28 @@
+@import "../globals/_variables"; // Customization for Bootstrap
+@import "../globals/_mixin";
+
+
+body.page-template-page-taxonomy-loop-terms{
+    .row-project_categories-wrapper{
+        padding-top: 8em;
+        padding-bottom: 8em;
+        .before{
+            text-align: center;
+            margin-bottom: 4em;
+            .before-title{
+                color: #EA1D7B;
+                font-size: 200%;
+            }
+            .before-desc{
+                font-size: 90%;
+            }
+        }
+        .item-tax-project_categories{
+            @include loop-item-tax-project-categories-classes;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) { 
+
+}

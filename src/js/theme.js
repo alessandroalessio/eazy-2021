@@ -40,7 +40,7 @@ if ( document.getElementById('side-menu') && document.getElementById('fullsize-m
 }
 
 // Animate on scroll
-if ( AOS ) {
+if (typeof AOS != "undefined") {
 	AOS.init({
 		once: true
 	});
@@ -62,3 +62,22 @@ window.addEventListener('scroll', function(e) {
 		}
 	}
 });
+
+// Header Fixed on Scroll	
+if ( document.querySelector('body').classList.contains('fix-header-on-scroll') ) {
+	// Create Clone
+	const header = document.querySelector('header').cloneNode(true);;
+	const clonedHeader = document.createElement('div');
+	clonedHeader.appendChild(header);
+	clonedHeader.classList.add('header-fixed');
+	document.querySelector('body').appendChild(clonedHeader);
+	// Scroll Event
+	window.addEventListener("scroll", (event) => {
+		let scrollY = this.scrollY;
+		if ( scrollY>500 ) {
+			document.querySelector('.header-fixed').classList.add('active');
+		} else {
+			document.querySelector('.header-fixed').classList.remove('active');
+		}
+	});
+}

@@ -21,67 +21,69 @@
 
 @mixin loop-item-post-classes {
     background: #fff;
-    box-shadow: 0px 0px 21px rgba(0, 79, 122, 0.15);
-    border-radius: 30px;
-    margin: 2em;
-    text-align: center;
-
+    box-shadow: 0px 0px 21px rgba(#F084AE, 0.15);
+    margin: 2em 0;
     .content{
-        padding: 2em;
         h2{
-            margin-top: 1em;
-            margin-bottom: 0em;
-            font-weight: 700;
-            font-size: 1.4em;
-            color: '#000';
-            &:before{
-                display: none;
-            }
+            color: #7D277A;
         }
         .date{
-            font-style: italic;
-            font-weight: normal;
-            font-size: 13px !important;
-            line-height: 17px;
-            text-align: center;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            font-size: 0.9em;
-            &:after{
-                content: ' ';
-                display: block;
-                min-height: 20px;
-                background: url('../../../build/img/drop.png') no-repeat center center;
-                margin-bottom: 1.5em;
-            }
+            display: none;
+            // font-style: italic;
+            // font-weight: normal;
+            // font-size: 13px !important;
+            // line-height: 17px;
+            // text-align: center;
+            // letter-spacing: 0.05em;
+            // text-transform: uppercase;
+            // font-size: 0.9em;
+            // &:after{
+            //     content: ' ';
+            //     display: block;
+            //     min-height: 20px;
+            //     background: url('../../../build/img/drop.png') no-repeat center center;
+            //     margin-bottom: 1.5em;
+            // }
         }
         .excerpt{
             // white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            height: 45px;
+            // overflow: hidden;
+            // text-overflow: ellipsis;
+            // height: 45px;
+            margin: 2em 0;
         }
         .btn-wrapper{
             text-decoration: none;
-            position: relative;
-            margin-top: 2em;
+            // position: relative;
+            // margin-top: 2em;
             a{
                 text-decoration: none;
-                position: absolute;
-                background: $orange;
-                left: 50%;
-                padding: 0.75em 3em;
-                transform: translate(-50%, 10px);
                 text-align: center;
                 text-transform: uppercase;
                 color: #fff;
-                font-size: 0.8em;
-                letter-spacing: 0.125em;
-                border-radius: 2em;
+                background-color: #7D277A;
                 transition: all 0.2s ease-in-out;
+                padding: 0.6em 2em;
                 &hover{
-                    background: lighten($orange, 10%);
+                    background: lighten(#7D277A, 10%);
                 }
+            }
+        }
+    }
+}
+
+@mixin loop-item-post-classes-mobile {
+    .content{
+        h2{
+            font-size: 1.3em;
+        }
+        .excerpt{
+            margin: 0.5em 0 !important;
+           font-size: .9em;
+        }
+        .btn-wrapper{
+            a{
+                padding: 0.2em 1em !important;
             }
         }
     }
@@ -193,7 +195,7 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        color: $light-blue;
+        // color: $light-blue;
         &:before{
             display: none;
         }
@@ -211,6 +213,64 @@
             h2{
                 color: #fff;
             }
+        }
+    }
+}
+
+@mixin loop-item-tax-project-categories-classes{
+    text-align: center;
+    box-shadow: 0 0 10px rgba(#3CBBEE, 15%);
+    margin-bottom: 1em;
+    .content-wrapper{
+        padding: 2em 1em;
+        .title{
+            font-weight: 400;
+            text-transform: uppercase;
+            margin: 0;
+        }
+        .description{
+            font-size: 95%;
+            margin: 2em 0;
+        }
+        .btn{
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@mixin contact-form-7{
+    // Contact Form 7
+    .wpcf7{
+        border: 1px solid $color1;
+        padding: 2em;
+        margin-bottom: 2em;
+        label{ display: block; }
+        input[type=text],
+        input[type=email],
+        textarea{
+            background: lighten($color2, 10%);
+        }
+        .one-half{
+            width: 48%;
+            margin-right: 4%;
+            float: left;
+        }
+        .one-third{
+            width: 30%;
+            margin-right: calc(10%/2);
+            float: left;
+        }
+        .one-fourth{
+            width: 24%;
+            margin-right: calc(4%/3);
+            float: left;
+        }
+        .offset-one-half{ margin-left: calc(100%/2); }
+        .offset-one-third{ margin-left: calc(100%/3); }
+        .offset-one-fourth{ margin-left: calc(100%/4); }
+        .last{
+            margin-right: 0;
         }
     }
 }

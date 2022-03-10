@@ -1,6 +1,9 @@
-<div class="col-md-6 col-12">
-    <div class="item item-<?php echo get_post_type() ?> row">
-        <div class="col-12">
+<div class="col-lg-6 col-12">
+    <div class="item item-<?php echo get_post_type() ?> row align-items-center">
+        <div class="col-md-6 col-5 pl-0 img-wrapper">
+            <?php the_post_thumbnail('large', ['class' => 'img-fluid']); ?>
+        </div>
+        <div class="col-md-6 col">
             <div class="content">
                 <h2><?php the_title(); ?></h2>
                 <span class="date"><?php the_date(); ?></span>
