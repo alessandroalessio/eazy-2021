@@ -31,37 +31,12 @@ endif;
 ?>
 
 <?php if ( eazy_get_option('header_show_topbar') ) : ?>
-  <?php get_template_part('partials/header', 'topbar'); ?>
+  <?php get_template_part('partials/header/components/header', 'topbar'); ?>
 <?php endif; ?>
 
-<header>
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-2 col-12">
-        <?php get_template_part('partials/header', 'logo'); ?>
-      </div>
-      <div class="col-md-10 col-12 d-md-block right">
-        <div class="d-md-inline-block">
-          <?php get_template_part('partials/header', 'navbar'); ?>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- <div class="nav-wrapper-full">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 col-12">
-          <div class="navbar-section">
-            <div class="navbar-wrapper row">
-              <div class="col-12">
-                <?php get_template_part('partials/header', 'navbar'); ?>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
+<?php $header_layout_type = ( eazy_get_option('header_layout_type') ) ? eazy_get_option('header_layout_type') : 'standard'; ?>
+<header class="header-<?php echo $header_layout_type; ?>">
+  <?php get_template_part('partials/header/header-'.$header_layout_type); ?>
 </header>
 
 <?php if ( eazy_get_option('breadcrumb_show') && !is_front_page() ) : ?>

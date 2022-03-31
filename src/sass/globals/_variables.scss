@@ -1,7 +1,8 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
-$font-family-sans-serif: 'Outfit', sans-serif !default;
-$font-family-serif: 'Outfit', serif !default;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+$font-family-sans-serif: 'Quicksand', sans-serif !default;
+$font-family-serif: 'Playfair Display SC', serif !default;
 
 // Grids
 $grid-breakpoints: (
@@ -20,11 +21,11 @@ $container-max-widths: (
 ) !default;
 
 // Website Color
-$color1: #2D3492;
-$color2: #B9E6F8;
+$color1: #f9c782;
+$color2: #0d0d0d;
 
 // Body
-$body-color: #5B5B5B !default;
+$body-color: #111 !default;
 
 // Social Colors
 $facebook-color: #3b5998;

@@ -56,7 +56,7 @@ function eazy_2021_customize_register( $wp_customize ) {
         'title'      => __( 'Header', 'eazytheme' ),
         'priority'   => 90
     ) );
-    // Email
+    // Show TopBar
     $wp_customize->add_setting( 'eazy_2021_header_show_topbar' , array(
          'default'		=> '',
      ) );
@@ -67,6 +67,20 @@ function eazy_2021_customize_register( $wp_customize ) {
         'section'   => 'eazy_2021_header_section',
         'settings'  => 'eazy_2021_header_show_topbar'
      ) );
+     // Header Type
+     $wp_customize->add_setting( 'eazy_2021_header_layout_type', array(
+      'default' => 'standard',
+    ) );
+    
+    $wp_customize->add_control( 'eazy_2021_header_layout_type', array(
+      'type' => 'select',
+      'section' => 'eazy_2021_header_section', // Add a default or your own section
+      'label' => __( 'Header Layout TYpe', 'eazytheme' ),
+      'choices' => array(
+        'standard' => __( 'Logo on left - Nav on right' ),
+        'center' => __( 'Logo centered on top - Nav on bottom' ),
+      ),
+    ) );
      // Logo
     $wp_customize->add_setting( 'eazy_2021_header_logo' , array(
             'default'		=> '',

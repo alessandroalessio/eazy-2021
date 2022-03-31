@@ -11,12 +11,14 @@ require 'includes/customizer.php';
  */
 require 'includes/helpers.php';
 require 'includes/advanced-custom-fields.php';
+require 'includes/ace-editor-for-cf7.php';
 
 /**
  * Custom Fields
  */
 include_once EAZY_2021_ACF_PATH_FIELDS.'/acf-page.php';
 if ( file_exists( EAZY_2021_ACF_PATH_FIELDS.'/acf-page-home.php' ) ) include_once EAZY_2021_ACF_PATH_FIELDS.'/acf-page-home.php';
+if ( file_exists( EAZY_2021_ACF_PATH_FIELDS.'/acf-page-onepage.php' ) ) include_once EAZY_2021_ACF_PATH_FIELDS.'/acf-page-onepage.php';
 if ( file_exists( EAZY_2021_ACF_PATH_FIELDS.'/acf-page-contacts.php' ) ) include_once EAZY_2021_ACF_PATH_FIELDS.'/acf-page-contacts.php';
 
 /**

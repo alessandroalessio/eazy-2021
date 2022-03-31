@@ -59,24 +59,23 @@ if ( $banner_immagine!='' ) : ?>
 
 <?php if ( get_the_content()!='' ) : ?>
     <div id="section-1" class="main-wrapper relative">
-        <img src="<?php echo get_template_directory_uri(); ?>/build/img/bg-chi-sono.png" alt="" class="scroll hidden-tablet" data-ratex="-2" data-ratey="0" data-direction="horizontal" style="position: absolute; z-index: -1; top: 27%; left: 70%;">
         <div class="container">
             <div class="row">
 
                 <?php if ( have_posts() ) :
                     while ( have_posts() ) : the_post(); ?>
-                        <div class="col-12 pb-4">
+                        <!-- <div class="col-12 pb-4"> -->
                             <?php
-                            if ( $subtitle = get_field('sottotitolo', get_the_ID()) ) : ?>
+                            /*if ( $subtitle = get_field('sottotitolo', get_the_ID()) ) : ?>
                                 <h3 class="text-center"><?php echo $subtitle; ?></h3>
                             <?php endif; ?>
                             <?php $nascondi_titolo = get_field('nascondi_titolo', get_the_ID() ); ?>
                             <?php if ( !eazy_get_option('breadcrumb_show_title') && !isset($nascondi_titolo) ) : ?>
                                 <h2 class="h1 text-center"><?php the_title(); ?></h2>
-                            <?php endif; ?>
-                        </div>
+                            <?php endif;*/ ?>
+                        <!-- </div> -->
 
-                        <?php if ( has_post_thumbnail() ) : ?>
+                        <?php /*if ( has_post_thumbnail() ) : ?>
                             <div class="col-md-6 col-sm-7">
                                 <div class="thumb-wrapper" data-aos="fade-down" data-aos-delay="2000" data-aos-duration="1000">
                                     <?php
@@ -88,8 +87,8 @@ if ( $banner_immagine!='' ) : ?>
                                     ]) ?>
                                 </div>
                             </div>
-                        <?php endif; ?>
-                        <div class="col-md-6 col-sm-5 text-wrapper" data-aos="fade-down" data-aos-delay="2500" data-aos-duration="1000">
+                        <?php endif;*/ ?>
+                        <div class="col-12 text-wrapper" data-aos="fade-down" data-aos-delay="2500" data-aos-duration="1000">
                             <?php the_content(); ?>
                         </div>
                     <?php endwhile;
@@ -405,25 +404,22 @@ if ( $query->have_posts() && $display_news_row ) { ?>
 wp_reset_postdata();
 ?>
 
-<div id="contact-form">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 offset-md-2 text-center">
-                <h3>Raccontami il tuo <strong>sogno</strong></h3>
-                <p class="intro">Utilizza il modulo sottostante per inviarmi un messaggio oppure utilizza 
-                    <?php 
-                    $whatsapp_number = str_replace('http://', '', eazy_get_option('contacts_whatsapp'));
-                    if ( $whatsapp_number!='' ) : ?>
-                        <a class="icon-whatsapp" href="https://wa.me/<?php echo $whatsapp_number; ?>" target="_blank" title="Whatsapp">
-                            WhatsApp
-                        </a>
-                    <?php endif; ?>
-                </p>
-                <?php echo do_shortcode('[wpforms id="7"]'); ?>
+<?php 
+/**
+ * Contact Form
+ */
+$contact_form = get_field('contact_form');
+if ( $contact_form!='' ) : ?>
+    <div id="contact-form">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2 text-center">
+                    <?php echo do_shortcode('[contact-form-7 id="'.$contact_form.'"]'); ?>
+                </div>
             </div>
         </div>
     </div>
-</div>
+<?php endif; ?>
 
 <?php
 $forza_riga_contatti = false;
